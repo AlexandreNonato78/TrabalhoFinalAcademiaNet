@@ -1,0 +1,25 @@
+﻿@model TrabalhoFinalAcademiaNet.Models.Entrega
+
+@{
+    ViewData["Title"] = "Status de Entrega";
+}
+
+<h1>Status de Entrega</h1>
+
+<p>Status atual: @Model.Status</p>
+
+<div id="map" style="height: 400px;"></div>
+
+@section Scripts {
+    <script>
+        // Utilizando a API Leaflet.js para exibir o mapa
+        var mymap = L.map('map').setView([@Model.Latitude, @Model.Longitude], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(mymap);
+
+        var marker = L.marker([@Model.Latitude, @Model.Longitude]).addTo(mymap);
+        marker.bindPopup("<b>Local de Entrega</b>").openPopup();
+    </script>
+}

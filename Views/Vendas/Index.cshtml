@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TrabalhoFinalAcademiaNet.Models.Venda>
+
+@{
+    ViewData["Title"] = "Venda";
+}
+
+<h1>Vendas</h1>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Adicionar Venda</a>
+</p>
+<table id="myTable" class="table">
+    <thead>
+        <tr>
+            <th style ="width: 100px;">
+                @Html.DisplayNameFor(model => model.DataVenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto.NomeProduto)
+            </th>
+            <th style="width: 100px;">
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalVenda)
+            </th>
+@*             <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th> *@
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td style="width: 100px;">
+                @Html.DisplayFor(modelItem => item.DataVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.NomeCliente)
+            </td>
+            <td>    
+                @Html.DisplayFor(modelItem => item.Produto.NomeProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td style="width: 100px;">
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalVenda)
+            </td>
+@*             <td>
+                @Html.DisplayFor(modelItem => item.Endereco)            
+            </td> *@
+
+            <td>
+                    <a asp-action="Edit" class="btn btn-success" asp-route-id="@item.Id">Alterar</a> |
+                    <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@section Scripts {
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
+}

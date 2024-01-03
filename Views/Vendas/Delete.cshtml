@@ -1,0 +1,63 @@
+﻿@model TrabalhoFinalAcademiaNet.Models.Venda
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div>
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>
+&nbsp;
+<h4>Você tem certeza que quer cancelar esta venda?</h4>
+<hr />
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.DataVenda)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.DataVenda)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Cliente.NomeCliente)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Cliente.NomeCliente)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Produto.NomeProduto)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Produto.NomeProduto)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Produto.Preco)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Produto.Preco)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.TotalVenda)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.TotalVenda)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+    </dl>
+    <hr />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+    </form>
+</div>

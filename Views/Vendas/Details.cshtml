@@ -1,0 +1,64 @@
+﻿@model TrabalhoFinalAcademiaNet.Models.Venda
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <a class="btn btn-danger" asp-action="Index">Voltar</a>
+</div>
+&nbsp;
+
+<h4>Detalhes da Venda</h4>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.DataVenda)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.DataVenda)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Cliente.NomeCliente)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Cliente.NomeCliente)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Produto.NomeProduto)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Produto.NomeProduto)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Produto.Preco)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Produto.Preco)
+        </dd>
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.TotalVenda)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.TotalVenda)
+        </dd>
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+    </dl>
+</div>
+<hr />
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Alterar</a>
+
+</div>
