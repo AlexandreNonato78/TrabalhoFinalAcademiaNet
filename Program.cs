@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
-using TrabalhoFinalAcademiaNet.Repositories.Interfaces;
-using TrabalhoFinalAcademiaNet.Repositories;
+//using TrabalhoFinalAcademiaNet.Repositories.Interfaces;
+//using TrabalhoFinalAcademiaNet.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Localization;
 using TrabalhoFinalAcademiaNet.Models;

@@ -1,17 +1,10 @@
 ﻿@model TrabalhoFinalAcademiaNet.Models.Entrega
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Create";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
+<h1>Create</h1>
 
 <h4>Entrega</h4>
 <hr />
@@ -20,9 +13,8 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
+                <label asp-for="VendaId" class="control-label"></label>
+                <select asp-for="VendaId" class ="form-control" asp-items="ViewBag.VendaId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Latitude" class="control-label"></label>
@@ -45,5 +37,6 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-</body>
-</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -31,6 +31,10 @@
     <Compile Remove="Controllers\IEntregaService.cs" />
     <Compile Remove="EntregaRepository.cs" />
     <Compile Remove="IEntrega.cs" />
+    <Compile Remove="Migrations\20231231144113_Entregas.cs" />
+    <Compile Remove="Migrations\20231231144113_Entregas.Designer.cs" />
+    <Compile Remove="Migrations\20240105162136_Entregas.cs" />
+    <Compile Remove="Migrations\20240105162136_Entregas.Designer.cs" />
     <Compile Remove="Repositories\EntregaRepository.cs" />
     <Compile Remove="Repositories\Interfaces\IEntrega.cs" />
   </ItemGroup>

@@ -74,11 +74,12 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.Property<double>("Longitude")
                         .HasColumnType("float");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("VendaId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("VendaId");
 
                     b.ToTable("Entregas");
                 });
@@ -145,6 +146,17 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.HasIndex("ProdutoId");
 
                     b.ToTable("Vendas");
+                });
+
+            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Entrega", b =>
+                {
+                    b.HasOne("TrabalhoFinalAcademiaNet.Models.Venda", "Venda")
+                        .WithMany()
+                        .HasForeignKey("VendaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Venda");
                 });
 
             modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Venda", b =>

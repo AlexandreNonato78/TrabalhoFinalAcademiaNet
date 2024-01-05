@@ -1,0 +1,417 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TrabalhoFinalAcademiaNet.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TrabalhoFinalAcademiaNet.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\7Eleven.png",
+      "PackagePath": "staticwebassets\\images\\7Eleven.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\BrPosto.jpg",
+      "PackagePath": "staticwebassets\\images\\BrPosto.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Envelope-icon24.png",
+      "PackagePath": "staticwebassets\\images\\Envelope-icon24.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Exxon.jpg",
+      "PackagePath": "staticwebassets\\images\\Exxon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Full-Cart-icon.png",
+      "PackagePath": "staticwebassets\\images\\Full-Cart-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Motorcycle-Oil.jpg",
+      "PackagePath": "staticwebassets\\images\\Motorcycle-Oil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\PostoBrasPetro.jpg",
+      "PackagePath": "staticwebassets\\images\\PostoBrasPetro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\PostoDoBairro.jpg",
+      "PackagePath": "staticwebassets\\images\\PostoDoBairro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Thumb7Eleven.jpg",
+      "PackagePath": "staticwebassets\\images\\Thumb7Eleven.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbBrPosto.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbBrPosto.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbExxon.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbExxon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbGas12.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbGas12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbGas55.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbGas55.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbGas6.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbGas6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbMotorcycle-Oil.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbMotorcycle-Oil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbOilcar.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbOilcar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbPostoBrasPetro.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbPostoBrasPetro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbPostoDoBairro.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbPostoDoBairro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\ThumbTruck-oil.jpg",
+      "PackagePath": "staticwebassets\\images\\ThumbTruck-oil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Thumbdiesel.jpg",
+      "PackagePath": "staticwebassets\\images\\Thumbdiesel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Thumbetanol.jpg",
+      "PackagePath": "staticwebassets\\images\\Thumbetanol.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\Thumbgasolina.jpg",
+      "PackagePath": "staticwebassets\\images\\Thumbgasolina.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\delete.png",
+      "PackagePath": "staticwebassets\\images\\delete.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\diesel.jpg",
+      "PackagePath": "staticwebassets\\images\\diesel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\etanol.jpg",
+      "PackagePath": "staticwebassets\\images\\etanol.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\faleconosco1.jpg",
+      "PackagePath": "staticwebassets\\images\\faleconosco1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\gas12.jpg",
+      "PackagePath": "staticwebassets\\images\\gas12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\gas55.jpg",
+      "PackagePath": "staticwebassets\\images\\gas55.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\gas6.jpg",
+      "PackagePath": "staticwebassets\\images\\gas6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\gasolina.jpg",
+      "PackagePath": "staticwebassets\\images\\gasolina.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\oilcar.jpg",
+      "PackagePath": "staticwebassets\\images\\oilcar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\images\\truck-oil.jpg",
+      "PackagePath": "staticwebassets\\images\\truck-oil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Alexandre\\source\\repos\\TrabalhoFinalAcademiaNet\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TrabalhoFinalAcademiaNet.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TrabalhoFinalAcademiaNet.props",
+      "PackagePath": "build\\TrabalhoFinalAcademiaNet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TrabalhoFinalAcademiaNet.props",
+      "PackagePath": "buildMultiTargeting\\TrabalhoFinalAcademiaNet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TrabalhoFinalAcademiaNet.props",
+      "PackagePath": "buildTransitive\\TrabalhoFinalAcademiaNet.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
