@@ -68,18 +68,21 @@ namespace TrabalhoFinalAcademiaNet.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("EnderecoEntrega")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Latitude")
                         .HasColumnType("float");
 
                     b.Property<double>("Longitude")
                         .HasColumnType("float");
 
-                    b.Property<int>("VendaId")
-                        .HasColumnType("int");
+                    b.Property<string>("NomeCliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("VendaId");
 
                     b.ToTable("Entregas");
                 });
@@ -146,17 +149,6 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.HasIndex("ProdutoId");
 
                     b.ToTable("Vendas");
-                });
-
-            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Entrega", b =>
-                {
-                    b.HasOne("TrabalhoFinalAcademiaNet.Models.Venda", "Venda")
-                        .WithMany()
-                        .HasForeignKey("VendaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Venda");
                 });
 
             modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Venda", b =>

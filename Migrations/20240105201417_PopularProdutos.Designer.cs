@@ -12,8 +12,8 @@ using TrabalhoFinalAcademiaNet;
 namespace TrabalhoFinalAcademiaNet.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20231230194539_PopularVendas")]
-    partial class PopularVendas
+    [Migration("20240105201417_PopularProdutos")]
+    partial class PopularProdutos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,6 +61,33 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Entrega", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EnderecoEntrega")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
+
+                    b.Property<string>("NomeCliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Entregas");
                 });
 
             modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Produto", b =>

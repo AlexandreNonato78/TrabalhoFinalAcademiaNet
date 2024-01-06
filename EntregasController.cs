@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TrabalhoFinalAcademiaNet.Models;
 
-namespace TrabalhoFinalAcademiaNet.Controllers
+namespace TrabalhoFinalAcademiaNet
 {
     public class EntregasController : Controller
     {
@@ -21,8 +21,7 @@ namespace TrabalhoFinalAcademiaNet.Controllers
         // GET: Entregas
         public async Task<IActionResult> Index()
         {
-            var contexto = _context.Entregas.Include(e => e.Venda);
-            return View(await contexto.ToListAsync());
+            return View(await _context.Entregas.ToListAsync());
         }
 
         // GET: Entregas/Details/5
@@ -34,7 +33,6 @@ namespace TrabalhoFinalAcademiaNet.Controllers
             }
 
             var entrega = await _context.Entregas
-                .Include(e => e.Venda)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (entrega == null)
             {
@@ -47,7 +45,6 @@ namespace TrabalhoFinalAcademiaNet.Controllers
         // GET: Entregas/Create
         public IActionResult Create()
         {
-            ViewData["VendaId"] = new SelectList(_context.Vendas, "Id", "Endereco");
             return View();
         }
 
@@ -56,7 +53,7 @@ namespace TrabalhoFinalAcademiaNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,VendaId,Latitude,Longitude")] Entrega entrega)
+        public async Task<IActionResult> Create([Bind("Id,NomeCliente,EnderecoEntrega,Latitude,Longitude")] Entrega entrega)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +61,6 @@ namespace TrabalhoFinalAcademiaNet.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["VendaId"] = new SelectList(_context.Vendas, "Id", "Endereco", entrega.VendaId);
             return View(entrega);
         }
 
@@ -81,7 +77,6 @@ namespace TrabalhoFinalAcademiaNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["VendaId"] = new SelectList(_context.Vendas, "Id", "Endereco", entrega.VendaId);
             return View(entrega);
         }
 
@@ -90,7 +85,7 @@ namespace TrabalhoFinalAcademiaNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,VendaId,Latitude,Longitude")] Entrega entrega)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeCliente,EnderecoEntrega,Latitude,Longitude")] Entrega entrega)
         {
             if (id != entrega.Id)
             {
@@ -117,7 +112,6 @@ namespace TrabalhoFinalAcademiaNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["VendaId"] = new SelectList(_context.Vendas, "Id", "Endereco", entrega.VendaId);
             return View(entrega);
         }
 
@@ -130,7 +124,6 @@ namespace TrabalhoFinalAcademiaNet.Controllers
             }
 
             var entrega = await _context.Entregas
-                .Include(e => e.Venda)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (entrega == null)
             {

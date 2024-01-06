@@ -29,6 +29,22 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Entregas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NomeCliente = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EnderecoEntrega = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Latitude = table.Column<double>(type: "float", nullable: false),
+                    Longitude = table.Column<double>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Entregas", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Produtos",
                 columns: table => new
                 {
@@ -88,6 +104,9 @@ namespace TrabalhoFinalAcademiaNet.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Entregas");
+
             migrationBuilder.DropTable(
                 name: "Vendas");
 

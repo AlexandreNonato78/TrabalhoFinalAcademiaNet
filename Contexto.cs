@@ -39,6 +39,9 @@ namespace TrabalhoFinalAcademiaNet
                         //.HasMany(e => e.Vendas)
                         //.WithOne(e => e.Produto);
 
+            modelBuilder.Entity<Entrega>().HasKey(e => e.Id);
+
+
             //base.OnModelCreating(modelBuilder);
         }
         //public DbSet<TrabalhoFinalAcademiaNet.Models.CarrinhoCompra> CarrinhoCompra { get; set; } = default!;

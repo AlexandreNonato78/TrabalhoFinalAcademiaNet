@@ -1,19 +1,23 @@
 ﻿@model IEnumerable<TrabalhoFinalAcademiaNet.Models.Entrega>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Entregas";
 }
 
-<h1>Index</h1>
+<h1>Entregas</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create">Adicionar Entrega</a>
 </p>
-<table class="table">
+
+<table id="myTable" class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Venda)
+                @Html.DisplayNameFor(model => model.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoEntrega)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Latitude)
@@ -28,8 +32,11 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Venda.Endereco)
+                @Html.DisplayFor(modelItem => item.NomeCliente)
             </td>
+             <td class="endereco-cell">
+                 @Html.DisplayFor(modelItem => item.EnderecoEntrega)
+             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Latitude)
             </td>
@@ -37,11 +44,53 @@
                 @Html.DisplayFor(modelItem => item.Longitude)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" class="btn btn-success" asp-route-id="@item.Id">Alterar</a> |
+                    <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+@section Scripts {
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
+}
+
+<style>
+    .endereco-cell {
+        max-width: 200px; /* Defina o valor que deseja para a largura máxima */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Adiciona reticências para indicar texto cortado */
+        white-space: nowrap; /* Impede a quebra de linha */
+    }
+</style>
+
+<script src="~/lib/leaflet/leaflet.js"></script>
+@* <script src="~/lib/leaflet/leaflet.min.js"></script> *@
+<link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.2/dist/leaflet.css" rel="stylesheet" />
+
+<div id="map" style="width:100%;height:400px"></div>
+
+<script>
+    var map = L.map('map').setView([-14.235, -51.925], 4);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var jsModel = @Html.Raw(Json.Serialize(Model));
+    console.log(jsModel)
+
+    for (i in jsModel)
+    {
+        item = jsModel[i]
+        L.marker([item.latitude, item.longitude]).addTo(map)
+            .bindPopup(item.nomecliente);
+    }
+    
+</script>
+
+

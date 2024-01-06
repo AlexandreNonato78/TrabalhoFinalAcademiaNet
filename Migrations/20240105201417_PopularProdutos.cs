@@ -28,7 +28,6 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                 "VALUES('Óleo Carro', 'Lubrificante', '', '19.99')");
             migrationBuilder.Sql("INSERT INTO Produtos(NomeProduto, Tipo, QuantidadeEstoque, Preco) " +
                 "VALUES('Óleo Caminhão', 'Lubrificante', '', '35.99')");
-
         }
 
         /// <inheritdoc />

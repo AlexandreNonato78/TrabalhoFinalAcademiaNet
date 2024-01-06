@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="~/css/dashboard.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="~/lib/leaflet/leaflet.css" rel="stylesheet" />
+    
 
 </head>
 <body>
@@ -60,7 +61,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
-    <link href="~/js/dashboard.js" rel="stylesheet" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
 </body>
 </html>
