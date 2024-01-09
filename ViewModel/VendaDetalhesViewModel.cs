@@ -16,7 +16,7 @@
         public string StatusEntrega { get; set; }
         public string Endereco {  get; set; }
         public double LatitudeEntrega { get; set; }
-        public double LongitudeEntrega { get; set; }
+        public double LongitudeEntrega { get; set; }        
     }
 
 }

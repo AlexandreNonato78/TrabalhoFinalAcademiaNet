@@ -119,7 +119,7 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.Property<double>("Longitude")
                         .HasColumnType("float");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("NomeCliente")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

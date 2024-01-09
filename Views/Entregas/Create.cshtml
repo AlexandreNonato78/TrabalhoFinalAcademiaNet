@@ -1,17 +1,10 @@
 ﻿@* @model TrabalhoFinalAcademiaNet.Models.Entrega
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Create";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
+<h1>Create</h1>
 
 <h4>Entrega</h4>
 <hr />
@@ -20,9 +13,14 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
+                <label asp-for="NomeCliente" class="control-label"></label>
+                <input asp-for="NomeCliente" class="form-control" />
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnderecoEntrega" class="control-label"></label>
+                <input asp-for="EnderecoEntrega" class="form-control" />
+                <span asp-validation-for="EnderecoEntrega" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Latitude" class="control-label"></label>
@@ -45,6 +43,12 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<<<<<<< HEAD
 </body>
 </html>
  *@
+=======
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+>>>>>>> 3ff889bfe6c42677b06d48e92898dc7a65b26a30

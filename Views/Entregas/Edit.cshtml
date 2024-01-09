@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Edit";
 }
+
 <div>
     <a class="btn btn-danger" asp-action="Index">Voltar</a>
 </div>
@@ -22,7 +23,7 @@
                 <label asp-for="Status" class="control-label"></label>
                 <input asp-for="Status" class="form-control" />
                 <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
+            </div>           
             
             <div class="form-group">
                 <label asp-for="Latitude" class="control-label"></label>
@@ -56,6 +57,7 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 
+<<<<<<< HEAD
     <script>
         $('#AlterarEnd').click(function () {
             var idVenda = $('#IdVenda').val();
@@ -76,3 +78,8 @@
     </script>
 
 }
+=======
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+>>>>>>> 3ff889bfe6c42677b06d48e92898dc7a65b26a30

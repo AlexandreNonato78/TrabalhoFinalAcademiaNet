@@ -35,12 +35,20 @@
     <Compile Remove="Controllers\IEntregaService.cs" />
     <Compile Remove="EntregaRepository.cs" />
     <Compile Remove="IEntrega.cs" />
+    <Compile Remove="Migrations\20231231144113_Entregas.cs" />
+    <Compile Remove="Migrations\20231231144113_Entregas.Designer.cs" />
+    <Compile Remove="Migrations\20240105162136_Entregas.cs" />
+    <Compile Remove="Migrations\20240105162136_Entregas.Designer.cs" />
     <Compile Remove="Repositories\EntregaRepository.cs" />
     <Compile Remove="Repositories\Interfaces\IEntrega.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="Views\Entrega.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include=".vs\TrabalhoFinalAcademiaNet\v17\HierarchyCache.v1.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,7 +70,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
@@ -72,6 +79,20 @@
     <Folder Include="wwwroot\lib\jquery-validation\dist\" />
     <Folder Include="wwwroot\lib\jquery\" />
     <Folder Include="wwwroot\lib\jquery\dist\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".vs\ProjectEvaluation\trabalhofinalacademianet.metadata.v7.bin" />
+    <None Include=".vs\ProjectEvaluation\trabalhofinalacademianet.projects.v7.bin" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\config\applicationhost.config" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\DesignTimeBuild\.dtbcache.v2" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\FileContentIndex\210a455a-6c64-4fa6-9d3f-9c358f77fb1d.vsidx" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\FileContentIndex\4394173a-ca3a-43a9-9add-b0ca2557359f.vsidx" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\FileContentIndex\5978c642-e882-4057-9517-44802d69f15e.vsidx" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\FileContentIndex\a4e74f03-159e-496c-a09a-56c3f67ba361.vsidx" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\FileContentIndex\f093eb6c-ebce-421d-b974-48979201aa38.vsidx" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\FileContentIndex\f83e988d-d9f9-426f-b9ed-ecd0a1d577ae.vsidx" />
+    <None Include=".vs\TrabalhoFinalAcademiaNet\v17\.futdcache.v2" />
   </ItemGroup>
 
 </Project>

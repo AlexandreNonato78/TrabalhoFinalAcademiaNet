@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\claud\OneDrive\Documentos\GitHub\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.csproj.AssemblyReference.cache
 C:\Users\claud\OneDrive\Documentos\GitHub\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\claud\OneDrive\Documentos\GitHub\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.AssemblyInfoInputs.cache
@@ -508,6 +509,8 @@ C:\Users\Alexandre\Desktop\TrabalhoFinalAcademiaNet (2)\TrabalhoFinalAcademiaNet
 C:\Users\Alexandre\Desktop\TrabalhoFinalAcademiaNet (2)\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.pdb
 C:\Users\Alexandre\Desktop\TrabalhoFinalAcademiaNet (2)\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.genruntimeconfig.cache
 C:\Users\Alexandre\Desktop\TrabalhoFinalAcademiaNet (2)\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\ref\TrabalhoFinalAcademiaNet.dll
+=======
+>>>>>>> 3ff889bfe6c42677b06d48e92898dc7a65b26a30
 C:\Users\Alexandre\source\repos\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.csproj.AssemblyReference.cache
 C:\Users\Alexandre\source\repos\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Alexandre\source\repos\TrabalhoFinalAcademiaNet\obj\Debug\net8.0\TrabalhoFinalAcademiaNet.AssemblyInfoInputs.cache

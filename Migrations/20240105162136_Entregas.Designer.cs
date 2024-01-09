@@ -12,8 +12,13 @@ using TrabalhoFinalAcademiaNet;
 namespace TrabalhoFinalAcademiaNet.Migrations
 {
     [DbContext(typeof(Contexto))]
+<<<<<<<< HEAD:Migrations/20240105162136_Entregas.Designer.cs
     [Migration("20240105162136_Entregas")]
     partial class Entregas
+========
+    [Migration("20240105201417_PopularProdutos")]
+    partial class PopularProdutos
+>>>>>>>> 3ff889bfe6c42677b06d48e92898dc7a65b26a30:Migrations/20240105201417_PopularProdutos.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,12 +76,20 @@ namespace TrabalhoFinalAcademiaNet.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+<<<<<<<< HEAD:Migrations/20240105162136_Entregas.Designer.cs
+========
+                    b.Property<string>("EnderecoEntrega")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+>>>>>>>> 3ff889bfe6c42677b06d48e92898dc7a65b26a30:Migrations/20240105201417_PopularProdutos.Designer.cs
                     b.Property<double>("Latitude")
                         .HasColumnType("float");
 
                     b.Property<double>("Longitude")
                         .HasColumnType("float");
 
+<<<<<<<< HEAD:Migrations/20240105162136_Entregas.Designer.cs
                     b.Property<int>("VendaId")
                         .HasColumnType("int");
 
@@ -84,6 +97,14 @@ namespace TrabalhoFinalAcademiaNet.Migrations
 
                     b.HasIndex("VendaId");
 
+========
+                    b.Property<string>("NomeCliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+>>>>>>>> 3ff889bfe6c42677b06d48e92898dc7a65b26a30:Migrations/20240105201417_PopularProdutos.Designer.cs
                     b.ToTable("Entregas");
                 });
 

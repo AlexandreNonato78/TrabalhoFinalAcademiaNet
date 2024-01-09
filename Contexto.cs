@@ -43,6 +43,7 @@ namespace TrabalhoFinalAcademiaNet
 
             modelBuilder.Entity<Produto>().HasKey(e => e.Id);
 
+
             modelBuilder.Entity<Entrega>()
                 .HasKey(e => e.Id);
 

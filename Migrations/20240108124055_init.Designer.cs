@@ -13,6 +13,8 @@ namespace TrabalhoFinalAcademiaNet.Migrations
 {
     [DbContext(typeof(Contexto))]
     [Migration("20240108124055_init")]
+
+    
     partial class init
     {
         /// <inheritdoc />
