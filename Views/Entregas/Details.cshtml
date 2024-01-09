@@ -1,45 +1,254 @@
-﻿@model TrabalhoFinalAcademiaNet.Models.Entrega
+﻿@model TrabalhoFinalAcademiaNet.ViewModel.VendaDetalhesViewModel
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Details";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-
 <div>
-    <h4>Entrega</h4>
-    <hr />
+    <a class="btn btn-danger" asp-action="Index">Voltar</a>
+</div>
+&nbsp;
+
+<h4>Detalhes do Envio</h4>
+<hr />
+<div>
+    @Html.HiddenFor(model => model.LatitudeEntrega)
+    @Html.HiddenFor(model => model.LongitudeEntrega)
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StatusEntrega)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StatusEntrega)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Latitude)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClienteNome)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Latitude)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClienteNome)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Longitude)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Longitude)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecoItem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PrecoItem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeItem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomeItem)
+        </dd>
+
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<hr />
+<div id="map" style="height: 400px;"></div>
+<div class="form-group" id="entregaLocal">
 </div>
-</body>
-</html>
+
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.EntregaId">Alterar</a>
+
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <script>
+
+        function initMap() {
+            const directionsRenderer = new google.maps.DirectionsRenderer();
+            const directionsService = new google.maps.DirectionsService();
+            const service = new google.maps.DistanceMatrixService();
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: { lat: 37.77, lng: -122.447 },
+            });
+
+            directionsRenderer.setMap(map);
+            calculateAndDisplayRoute(directionsService, directionsRenderer);
+           
+
+            const latitude = parseFloat('@Model.LatitudeEntrega'.replace(',', '.'));
+            const longitude = parseFloat('@Model.LongitudeEntrega'.replace(',', '.'));
+            const origem = new google.maps.LatLng(-23.609721455674634, -46.69722720441395);
+            const destino = new google.maps.LatLng(latitude, longitude);
+
+
+
+            service.getDistanceMatrix(
+                {
+                    origins: [origem],
+                    destinations: [destino],
+                    travelMode: 'DRIVING'
+                },
+
+                function (response, status) {
+                    if (status == 'OK') {
+                        const resultado = response.rows[0].elements[0];
+                        const distancia = resultado.distance.text;
+                        const duracao = resultado.duration.text;
+
+                        const infowindow = new google.maps.InfoWindow({
+                            content: 'Distância: ' + distancia + '<br>Tempo de Viagem: ' + duracao
+                        });
+
+
+                        $('#entregaLocal').append('<p><strong>Endereço de Entrega:</strong> ' + '@Model.Endereco' + '</p>');
+                        $('#entregaLocal').append('<p><strong>Distancia:</strong> ' + distancia + '</p>');
+                        $('#entregaLocal').append('<p><strong>Tempo de deslocamento:</strong> ' + duracao + '</p>');
+
+                        let distanciaDouble = parseFloat(distancia);
+                        let dias = "2 Dias"
+                        if (distanciaDouble > 20.0) {
+                            $('#entregaLocal').append('<p><strong>Será entregue em:</strong> ' + dias + '</p>');
+                        } else if (distanciaDouble > 50.0) {
+                            dias = "5 Dias"
+                            $('#entregaLocal').append('<p><strong>Será entregue em:</strong> ' + dias + '</p>');
+                        } else {
+                            dias = "1 Dia"
+                            $('#entregaLocal').append('<p><strong>Será entregue em:</strong> ' + dias + '</p>');
+                        }
+                      
+                    } else {
+                        console.log('Erro ao calcular a distância:', status);
+                    }
+                }
+            );
+
+         
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+            const latitude = parseFloat('@Model.LatitudeEntrega'.replace(',', '.'));
+            const longitude = parseFloat('@Model.LongitudeEntrega'.replace(',', '.'));
+            directionsService
+                .route({
+                    origin: {
+                        lat: -23.609721455674634, lng: - 46.69722720441395
+                    },
+                    destination: {
+                        lat: latitude, lng: longitude
+                    },
+                    // Note that Javascript allows us to access the constant
+                    // using square brackets and a string value as its
+                    // "property."
+                    travelMode: 'DRIVING',
+                })
+                .then((response) => {
+                    directionsRenderer.setDirections(response);
+                })
+                .catch((e) => window.alert("Directions request failed due to " + status));
+        }
+
+
+
+
+        window.initMap = initMap;
+
+        // const latitude = parseFloat('@Model.LatitudeEntrega'.replace(',', '.'));
+        // const longitude = parseFloat('@Model.LongitudeEntrega'.replace(',', '.'));
+        // function initMap() {
+        //     var directionsService = new google.maps.DirectionsService();
+        //     var directionsRenderer = new google.maps.DirectionsRenderer();
+        //     var origin = new google.maps.LatLng(-23.609721455674634, -46.69722720441395);
+        //     var destination = new google.maps.LatLng(latitude, longitude);
+        //     var mapOptions = {
+        //         zoom: 14,
+        //         center: origin
+        //     }
+        //     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        //     calcRoute();
+        //     directionsRenderer.setMap(map);
+        // }
+
+        // function calcRoute() {
+        //     var selectedMode = document.getElementById('mode').value;
+        //     var request = {
+        //         origin: origin,
+        //         destination: destination,
+        //         travelMode: 'DRIVING'
+        //     };
+        //     directionsService.route(request, function (response, status) {
+        //         if (status == 'OK') {
+        //             directionsRenderer.setDirections(response);
+        //         }
+        //     });
+        // }
+
+        // function initMap() {
+        //     const latitude = parseFloat('@Model.LatitudeEntrega'.replace(',', '.'));
+        //     const longitude = parseFloat('@Model.LongitudeEntrega'.replace(',', '.'));
+
+        //     const map = new google.maps.Map(document.getElementById('mapa'), {
+        //         center: { lat: latitude, lng: longitude },
+        //         zoom: 15
+        //     });
+
+        //     const coordenadasItemEnvio = { lat: latitude, lng: longitude };
+
+        //     const marker = new google.maps.Marker({
+        //         position: coordenadasItemEnvio,
+        //         map: map,
+        //         title: 'Local de Entrega'
+        //     });
+
+        //     const origem = new google.maps.LatLng(-23.609721455674634, -46.69722720441395); // Coordenadas da origem (endereço fixo)
+        //     const destino = new google.maps.LatLng(latitude, longitude); // Coordenadas do destino
+
+        //     const service = new google.maps.DistanceMatrixService();
+        //     const directionsRenderer = new google.maps.DirectionsRenderer();
+
+
+        //     service.getDistanceMatrix(
+        //         {
+        //             origins: [origem],
+        //             destinations: [destino],
+        //             travelMode: 'DRIVING'
+        //         },
+
+        //         function (response, status) {
+        //             if (status == 'OK') {
+        //                 const resultado = response.rows[0].elements[0];
+        //                 const distancia = resultado.distance.text;
+        //                 const duracao = resultado.duration.text;
+
+        //                 const infowindow = new google.maps.InfoWindow({
+        //                     content: 'Distância: ' + distancia + '<br>Tempo de Viagem: ' + duracao
+        //                 });
+
+        //                 marker.addListener('click', function () {
+        //                     infowindow.open(map, marker);
+        //                 });
+        //             } else {
+        //                 console.log('Erro ao calcular a distância:', status);
+        //             }
+        //         }
+        //     );
+
+        //     directionsService.route(request, function (response, status) {
+        //         if (status == 'OK') {
+        //             directionsRenderer.setDirections(response);
+        //         } else {
+        //             console.log('Erro ao calcular a rota:', status);
+        //         }
+        //     });
+
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9-OrMCsHXW75BZiw1jyWtyU5HwwQ8fF8&callback=initMap" async defer></script>
+
+}

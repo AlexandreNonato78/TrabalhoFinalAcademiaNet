@@ -40,11 +40,6 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("Endereco")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<string>("NomeCliente")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -60,6 +55,53 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Endereco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Bairro")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Bairro");
+
+                    b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Cep");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Complemento")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Complemento");
+
+                    b.Property<string>("Localidade")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Localidade");
+
+                    b.Property<string>("Logradouro")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Logradouro");
+
+                    b.Property<string>("Numero")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Uf")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Uf");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId")
+                        .IsUnique();
+
+                    b.ToTable("Endereco");
+                });
+
             modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Entrega", b =>
                 {
                     b.Property<int>("Id")
@@ -67,6 +109,9 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdVenda")
+                        .HasColumnType("int");
 
                     b.Property<double>("Latitude")
                         .HasColumnType("float");
@@ -79,6 +124,8 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdVenda");
 
                     b.ToTable("Entregas");
                 });
@@ -129,6 +176,9 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool>("Enviar")
+                        .HasColumnType("bit");
+
                     b.Property<int>("ProdutoId")
                         .HasColumnType("int");
 
@@ -145,6 +195,28 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.HasIndex("ProdutoId");
 
                     b.ToTable("Vendas");
+                });
+
+            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Endereco", b =>
+                {
+                    b.HasOne("TrabalhoFinalAcademiaNet.Models.Cliente", "Cliente")
+                        .WithOne("Endereco")
+                        .HasForeignKey("TrabalhoFinalAcademiaNet.Models.Endereco", "ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
+                });
+
+            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Entrega", b =>
+                {
+                    b.HasOne("TrabalhoFinalAcademiaNet.Models.Venda", "Venda")
+                        .WithMany("Entrega")
+                        .HasForeignKey("IdVenda")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Venda");
                 });
 
             modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Venda", b =>
@@ -164,6 +236,17 @@ namespace TrabalhoFinalAcademiaNet.Migrations
                     b.Navigation("Cliente");
 
                     b.Navigation("Produto");
+                });
+
+            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Cliente", b =>
+                {
+                    b.Navigation("Endereco")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TrabalhoFinalAcademiaNet.Models.Venda", b =>
+                {
+                    b.Navigation("Entrega");
                 });
 #pragma warning restore 612, 618
         }

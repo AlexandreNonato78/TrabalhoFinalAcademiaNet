@@ -1,23 +1,21 @@
 ﻿@model TrabalhoFinalAcademiaNet.Models.Entrega
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Edit";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
-</head>
-<body>
-
-<h4>Entrega</h4>
+<div>
+    <a class="btn btn-danger" asp-action="Index">Voltar</a>
+</div>
+&nbsp;
+<h4>Alterar dados do Cliente</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
+            <input type="hidden" id="logradouroHidden" name="Endereco.Logradouro" />
+            <input type="hidden" id="bairroHidden" name="Endereco.Bairro" />
+            <input type="hidden" id="localidadeHidden" name="Endereco.Localidade" />
+            <input type="hidden" id="ufHidden" name="Endereco.Uf" />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
@@ -25,26 +23,56 @@
                 <input asp-for="Status" class="form-control" />
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
                 <label asp-for="Latitude" class="control-label"></label>
                 <input asp-for="Latitude" class="form-control" />
                 <span asp-validation-for="Latitude" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
                 <label asp-for="Longitude" class="control-label"></label>
                 <input asp-for="Longitude" class="form-control" />
                 <span asp-validation-for="Longitude" class="text-danger"></span>
             </div>
+
+@*             <div class="form-group" id="endereco">
+            </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <label asp-for="Endereco.Numero" class="control-label"></label>
+                <input asp-for="Endereco.Numero" class="form-control" required />
+                <span asp-validation-for="Endereco.Numero" class="text-danger"></span>
+            </div>      *@    
+            
+            <div class="form-group">
+                <input type="submit" value="Alterar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 
-</body>
-</html>
+    <script>
+        $('#AlterarEnd').click(function () {
+            var idVenda = $('#IdVenda').val();
+            $.ajax({
+                url: '/Clientes/Edit/' + idVenda,
+                method: 'GET',
+                data: { idVenda: iidVenda },
+                success: function (data) {
+                    // Redirecionar para a página de edição do cliente
+                    window.location.href = '/Clientes/Edit/' + idVenda;
+                },
+                error: function (error) {
+                    console.error('Erro na requisição AJAX:', error);
+                }
+            });
+        });
+
+    </script>
+
+}

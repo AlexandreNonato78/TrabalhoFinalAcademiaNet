@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol;
 using TrabalhoFinalAcademiaNet;
 using TrabalhoFinalAcademiaNet.Models;
 
@@ -53,6 +54,7 @@ namespace TrabalhoFinalAcademiaNet.Controllers
             //ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "NomeProduto");
             ViewBag.Clientes = new SelectList(_context.Clientes, "Id", "NomeCliente").ToList();
             ViewBag.Produtos = new SelectList(_context.Produtos, "Id", "NomeProduto").ToList();
+      
             return View();
         }
 
@@ -69,12 +71,15 @@ namespace TrabalhoFinalAcademiaNet.Controllers
             {
                 venda.TotalVenda = venda.Quantidade * produto.Preco;
                 produto.QuantidadeEstoque -= venda.Quantidade;
+                venda.Enviar = true;
                 _context.Add(venda);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "NomeCliente", venda.ClienteId);
             ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "NomeProduto", venda.ProdutoId);
+            var clienteEnd = await _context.Clientes.Include(x => x.Endereco).FirstOrDefaultAsync(x => x.Id == venda.ClienteId);
+            ViewData["EnderecoId"] = new SelectList(clienteEnd.Endereco.Bairro);
             return View(venda);
         }
 
@@ -103,7 +108,7 @@ namespace TrabalhoFinalAcademiaNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DataVenda,Quantidade,ClienteId,ProdutoId,Endereco")] Venda venda)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,DataVenda,Quantidade,ClienteId,ProdutoId")] Venda venda)
         {
             if (id != venda.Id)
             {
@@ -162,6 +167,27 @@ namespace TrabalhoFinalAcademiaNet.Controllers
         private bool VendaExists(int id)
         {
             return _context.Vendas.Any(e => e.Id == id);
+        }
+
+        public IActionResult BuscaEndCadastrado(int idCliente)
+        {
+            var end = _context.Clientes.Include(x => x.Endereco).FirstOrDefault(x => x.Id == idCliente);
+            var endereco = new
+            {
+                logradouro = end.Endereco.Logradouro,
+                bairro = end.Endereco.Bairro,
+                localidade = end.Endereco.Localidade,
+                uf = end.Endereco.Uf,
+                numero = end.Endereco.Numero,
+                cep = end.Endereco.Cep,
+                complemento = end.Endereco.Complemento
+            };
+
+            if (end != null)
+            {
+                return Json(endereco);
+            }
+            return null;
         }
     }
 }

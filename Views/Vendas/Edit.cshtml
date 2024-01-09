@@ -7,7 +7,7 @@
     <a class="btn btn-danger" asp-action="Index">Voltar</a>
 </div>
 &nbsp;
-<h4>Alterar dados do Cliente</h4>
+<h4>Alterar dados da Venda</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -63,10 +63,17 @@
 
             <div class="form-group">
                 <label asp-for="Endereco" class="control-label"></label>
-                <input asp-for="Endereco" class="form-control" />
+                <div class="input-group">
+                    <input asp-for="Endereco" class="form-control" disabled />
+                    <div class="input-group-append">
+                        <input type="button" id="AlterarEnd" value="Alterar" class="btn btn-primary" />
+                    </div>
+                </div>
                 <span asp-validation-for="Endereco" class="text-danger"></span>
             </div>
+
             <input type="hidden" asp-for="Id" />
+            <input type="hidden" id="hClienteId" asp-for="ClienteId" />
 
             <div class="form-group">
                 <input type="submit" value="Alterar" class="btn btn-primary" />
@@ -79,4 +86,23 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <script>
+        $('#AlterarEnd').click(function () {
+            var idCliente = $('#hClienteId').val();
+            $.ajax({
+                url: '/Clientes/Edit/' + idCliente,
+                method: 'GET',
+                data: { idCliente: idCliente },
+                success: function (data) {
+                    // Redirecionar para a página de edição do cliente
+                    window.location.href = '/Clientes/Edit/' + idCliente;
+                },
+                error: function (error) {
+                    console.error('Erro na requisição AJAX:', error);
+                }
+            });
+        });
+
+    </script>
 }

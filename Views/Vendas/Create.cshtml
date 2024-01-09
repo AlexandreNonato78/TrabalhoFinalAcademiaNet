@@ -58,18 +58,20 @@
                 <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
             &nbsp;
-@*             <div class="form-group">
-                <label asp-for="TotalVenda" class="control-label"></label>
-                <input asp-for="TotalVenda" class="form-control" />
-                <span asp-validation-for="TotalVenda" class="text-danger"></span>
+            @*             <div class="form-group">
+            <label asp-for="TotalVenda" class="control-label"></label>
+            <input asp-for="TotalVenda" class="form-control" />
+            <span asp-validation-for="TotalVenda" class="text-danger"></span>
             </div> *@
             &nbsp;
+            <div class="form-group" id="endereco">
+            </div>
             <div class="form-group">
                 <label asp-for="Endereco" class="control-label"></label>
                 <input asp-for="Endereco" class="form-control" />
                 <span asp-validation-for="Endereco" class="text-danger"></span>
             </div>
-            &nbsp;         
+            &nbsp;
             <div class="form-group">
                 <input type="submit" value="Adicionar" class="btn btn-primary" />
             </div>
@@ -81,4 +83,39 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        function preencherEndereco(endereco) {
+            $('#endereco').empty();
+
+            $('#endereco').append('<p><strong>Logradouro:</strong> ' + endereco.logradouro + '</p>');
+            $('#endereco').append('<p><strong>Bairro:</strong> ' + endereco.bairro + '</p>');
+            $('#endereco').append('<p><strong>Localidade:</strong> ' + endereco.localidade + '</p>');
+            $('#endereco').append('<p><strong>UF:</strong> ' + endereco.uf + '</p>');
+            $('#endereco').append('<p><strong>Numero:</strong> ' + endereco.numero + '</p>');
+            $('#endereco').append('<p><strong>Complemento:</strong> ' + endereco.complemento + '</p>');
+            $('#logradouroHidden').val(endereco.logradouro);
+            $('#bairroHidden').val(endereco.bairro);
+            $('#localidadeHidden').val(endereco.localidade);
+            $('#ufHidden').val(endereco.uf);
+
+            var enderecoConcatenado = `${endereco.logradouro}, ${endereco.bairro}, ${endereco.localidade}, ${endereco.uf}, ${endereco.numero}, ${endereco.complemento}`;
+
+            $('#Endereco').val(enderecoConcatenado).prop('readonly', true);;
+        }
+
+        $('#ClienteId').change(function () {
+            var idCliente = $(this).find('option:selected').val();
+            $.ajax({
+                url: '/Vendas/BuscaEndCadastrado', // Substitua pela rota da sua Action
+                method: 'GET',
+                data: { idCliente: idCliente },
+                success: function (data) {
+                    console.log(data);
+                    preencherEndereco(data);
+                }
+            });
+        });
+    </script>
+
+
 }

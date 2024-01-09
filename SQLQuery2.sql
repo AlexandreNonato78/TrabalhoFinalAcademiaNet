@@ -1,5 +1,5 @@
 
-create login alex23 with password='senha1234';
+alter login alex23 with password='senha1234';
 create user usuario from login alex23;
 exec sp_addrolemember 'DB_DATAREADER', 'usuario';
 exec sp_addrolemember 'DB_DATAWRITER', 'usuario';
@@ -41,10 +41,10 @@ drop table Clientes
 
 
 
-insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('PostoDoZé', '0123456', 'ze@email.com', '40044000')
-insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('BrPosto', '0987654', 'br@email.com', '40049999')
-insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('Exxon', '22234555', 'exxon@email.com', '55554000')
-insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('7Eleven', '44889900', '7eleven@email.com', '88889999')
+insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('PostoDoZé', '0123456', 'ze@email.com', '40044000');
+insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('BrPosto', '0987654', 'br@email.com', '40049999');
+insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('Exxon', '22234555', 'exxon@email.com', '55554000');
+insert into Clientes(NomeCliente, Cnpj, Email, Telefone) values ('7Eleven', '44889900', '7eleven@email.com', '88889999');
 
 
 
@@ -57,6 +57,10 @@ insert into Produtos(NomeProduto, Tipo, Descricao,  Quantidade, Preco) values ('
 insert into Produtos(NomeProduto, Tipo, Descricao,  Quantidade, Preco) values ('ÓleoCarro',  'Óleo&Lubrificante', '', '', 19.99)
 insert into Produtos(NomeProduto, Tipo, Descricao,  Quantidade, Preco) values ('ÓleoMoto',  'Óleo&Lubrificante', '', '', 9.99)
 insert into Produtos(NomeProduto, Tipo, Descricao,  Quantidade, Preco) values ('ÓleoCaminhão', 'Óleo&Lubrificante', '', '', 29.99)
+
+insert into Produtos(NomeProduto, Tipo, Descricao,Preco) values ('Gas55', 'Gas', '', 17.12);
+insert into Produtos(NomeProduto, Tipo, Descricao, Preco) values ('ÓleoCarro',  'Óleo&Lubrificante', '', 19.99)
+
 
 
 select * from Clientes

@@ -18,10 +18,10 @@ namespace TrabalhoFinalAcademiaNet.Models
         [Display(Name = "CNPJ do Cliente")]
         public string Cnpj { get; set; }
 
-        [StringLength(100, ErrorMessage = "o tamanho máximo é de 200 caracteres")]
-        [Required(ErrorMessage = "Informe o endereço do Cliente!")]
-        [Display(Name = "Endereço do Cliente")]
-        public string Endereco { get; set; }
+        //[StringLength(100, ErrorMessage = "o tamanho máximo é de 200 caracteres")]
+        //[Required(ErrorMessage = "Informe o endereço do Cliente!")]
+        //[Display(Name = "Endereço do Cliente")]
+        //public string Endereco { get; set; }
 
         [StringLength(20, ErrorMessage = "o tamanho máximo é de 20 caracteres")]
         [Required(ErrorMessage = "Informe o Email do Cliente!")]
@@ -46,9 +46,7 @@ namespace TrabalhoFinalAcademiaNet.Models
 
 
         //public ICollection<Venda> Vendas { get; set; }
-
-
-
+        public Endereco Endereco { get; set; }
 
     }
 }
