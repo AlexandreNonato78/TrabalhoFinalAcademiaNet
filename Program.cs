@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Localization;
 using TrabalhoFinalAcademiaNet.Models;
 using TrabalhoFinalAcademiaNet.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace TrabalhoFinalAcademiaNet
 {
@@ -19,6 +20,15 @@ namespace TrabalhoFinalAcademiaNet
             //    options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
             // Add services to the container.
 
+            //USUARIO
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => options.LoginPath = "/Usuario/Index");
+            builder.Services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+            //USUARIO
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddMemoryCache();
@@ -72,11 +82,13 @@ namespace TrabalhoFinalAcademiaNet
             app.UseRouting();
             app.UseSession();
 
+            app.UseAuthentication();//USUARIO
             app.UseAuthorization();
+            app.UseCookiePolicy();//USUARIO
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Usuario}/{action=Index}/{id?}");
 
             app.Run();
         }

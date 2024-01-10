@@ -34,6 +34,8 @@ namespace TrabalhoFinalAcademiaNet
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Usuario>().HasNoKey();
+
             modelBuilder.Entity<Cliente>()
              .HasOne(c => c.Endereco)
              .WithOne(e => e.Cliente)
