@@ -5,14 +5,14 @@ O objetivo é fazer um minissistema em C#, ASPNET Core, Entity Framework MVC, ut
 Este sistema foi pensado para uma empresa fornecedora de combustíveis, onde basicamente:
 
 1) O usuário entra na página através de seu Login e Senha.
-2) 
-3) O usuário verifica na página "Clientes" os dados já cadastrados das empresas compradoras e também pode criar um novo "Cliente".
+ 
+2) O usuário verifica na página "Clientes" os dados já cadastrados das empresas compradoras e também pode criar um novo "Cliente".
    
    2.1) Campos: Nome, Cnpj, email, telefone e CEP (que puxa para o sistema as informações do endereço utilizando a API do site ViaCEP).
    
    2.2) Também é possível alterar(edit), excluir(delete) e ver os detalhes do cliente cadastrado (details).
    
-4) O usuário verifica na página "Produtos" os produtos já cadastrados e também pode criar um novo "Produto".
+3) O usuário verifica na página "Produtos" os produtos já cadastrados e também pode criar um novo "Produto".
    
    3.1) Campos: Nome, Tipo, Quantidade-Estoque e Preço.
    
